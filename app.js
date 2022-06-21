@@ -24,8 +24,7 @@ document.body.style.textAlign = "center";
 
 const quoteDisplay = document.getElementById("quote");
 quoteDisplay.style.color = "white";
-quoteDisplay.style.fontSize = "12px";
-quoteDisplay.style.background = "";
+quoteDisplay.style.fontSize = "20px";
 quoteDisplay.style.fontStyle = "italic";
 //random quote generating function
 function randomQuote() {
