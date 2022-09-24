@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="style.css" />
-    <title>Random Quote Generator</title>
+    <title>Quote Generator</title>
   </head>
   <body>
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
+      <source src="rain.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Optional: some overlay text to describe the video -->
+
     <section id="container">
       <h1 id="heading">🌸 | Your Daily Dose of Positivity | 🌸</h1>
-      <div id="quote">"To lead people walk behind them." author: Lao Tzu</div>
-      <button id="btn-quote">New Quote</button>
+      <div id="quote">
+        "To lead people walk behind them."
+        <span id="author">author: Lao Tzu</span>
+      </div>
+      <button id="btn-quote">Next Quote</button>
     </section>
 
     <div>
