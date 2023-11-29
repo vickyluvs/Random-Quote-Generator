@@ -1,29 +1,28 @@
-// this is our array of quotes
-const array = [
-  '"Genius is one percent inspiration and ninety-nine percent perspiration." Author: Thomas Edison',
-  ' "You can observe a lot just by watching." author: Yogi Berra',
-  '"A house divided against itself cannot stand." author: Abraham Lincoln"',
-  ' "Difficulties increase the nearer we get to the goal." author: Johann Wolfgang von Goethe',
-  '"Fate is in your hands and no one else." author: Byron Pulsifer',
-  '"Be the chief but never the lord."  author: Lao Tzu',
-  '"Nothing happens unless first we dream." author: Carl Sandburg',
-  '"Well begun is half done."  author: Aristotle',
-  ' "Life is a learning experience, only if you learn." author: Yogi Berra',
-  '"Self-complacency is fatal to progress." author: Margaret Sangster',
-];
-
 // function to get quotes with axios
 
-function getQuote() {
-  let webUrl = `https://www.affirmations.dev/`;
+function getQuote(response) {
+  let quoteDisplay = document.getElementById("quote_para");
+  let authorDisplay = document.getElementById("author");
+
+  let apiQuote = [];
+  response.data.forEach((array) => {
+    apiQuote.push(Object.values(array)[0]);
+  });
+
+  let authorQuote = [];
+  response.data.forEach((array) => {
+    authorQuote.push(Object.values(array)[1]);
+  });
+
+  quoteDisplay.innerHTML =
+    apiQuote[Math.floor(Math.random() * apiQuote.length)];
+
+  authorDisplay.innerHTML =
+    authorQuote[Math.floor(Math.random() * authorQuote.length)];
+}
+let webUrl = `https://type.fit/api/quotes`;
+let button = document.getElementById("btn-quote");
+
+button.addEventListener("click", () => {
   axios.get(webUrl).then(getQuote);
-}
-
-const quoteDisplay = document.getElementById("quote");
-
-//random quote generating function
-function randomQuote() {
-  quoteDisplay.innerHTML = array[Math.floor(Math.random() * array.length)];
-}
-const button = document.getElementById("btn-quote");
-button.addEventListener("click", randomQuote);
+});
