@@ -1,16 +1,19 @@
 html {
+  font-size: 20px;
+}
+
+body {
+  background-image: url(./resources/backgroundImg.jpg);
+  background-size: cover;
   box-sizing: border-box;
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-body {
-  background-color: rgb(221, 208, 223);
-}
-
-#container {
-  background-color: rgb(225, 211, 239);
+h1#heading {
+  color: aliceblue;
+  font-size: 3rem;
 }
 
 a.link {
@@ -20,16 +23,37 @@ a.link {
 }
 #container {
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.15);
-  width: 500px;
-  height: 150px;
-  margin: 100px auto;
+  max-width: 400px;
+  height: 200px;
+  margin: 50px auto;
   border-radius: 10px;
+  background-color: rgb(225, 211, 239);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#quote {
+  margin: 0 auto;
+  font-size: 1.3rem;
+  color: aliceblue;
+}
+
+#author {
+  font-size: 12px;
 }
 
 #btn-quote {
-  margin-top: 30px;
+  margin-top: 25px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 5px 15px 5px 15px;
+  cursor: pointer;
+  color: rgb(225, 211, 239);
 }
 
-#heading {
-  color: aliceblue;
+footer {
+  font-size: 12px;
 }

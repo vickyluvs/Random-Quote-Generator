@@ -12,23 +12,11 @@ const array = [
   '"Self-complacency is fatal to progress." author: Margaret Sangster',
 ];
 
-const header = document.getElementById("heading");
-heading.style.fontFamily = "Helvetica Neue";
-heading.style.fontSize = "24px";
+// const header = document.getElementById("heading");
 
 const button = document.getElementById("btn-quote");
-button.style.backgroundColor = "alice-blue";
-button.style.borderRadius = "5px";
-button.style.border = "none";
-button.style.cursor = "pointer";
-button.style.fontSize = "12px";
-(button.style.fontFamily = "Courier New"), "Courier", "monospace";
 
 const quoteDisplay = document.getElementById("quote");
-quoteDisplay.style.color = "white";
-quoteDisplay.style.fontSize = "16px";
-quoteDisplay.style.fontStyle = "normal";
-(quoteDisplay.style.fontFamily = "Courier New"), "Courier", "monospace";
 
 //random quote generating function
 function randomQuote() {
