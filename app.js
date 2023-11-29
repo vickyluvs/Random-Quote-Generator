@@ -12,9 +12,12 @@ const array = [
   '"Self-complacency is fatal to progress." author: Margaret Sangster',
 ];
 
-// const header = document.getElementById("heading");
+// function to get quotes with axios
 
-const button = document.getElementById("btn-quote");
+function getQuote() {
+  let webUrl = `https://www.affirmations.dev/`;
+  axios.get(webUrl).then(getQuote);
+}
 
 const quoteDisplay = document.getElementById("quote");
 
@@ -22,5 +25,5 @@ const quoteDisplay = document.getElementById("quote");
 function randomQuote() {
   quoteDisplay.innerHTML = array[Math.floor(Math.random() * array.length)];
 }
-
+const button = document.getElementById("btn-quote");
 button.addEventListener("click", randomQuote);
